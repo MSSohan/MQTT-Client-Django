@@ -91,7 +91,7 @@ def on_connect(mqtt_client, userdata, flags, rc):
 
 ### Writing message callback
 
-This function will print the messages received by the `django/mqtt` topic.
+This function will print the messages received by the `uprint/kiosk` topic.
 
 ```
 def on_message(mqtt_client, userdata, msg):
