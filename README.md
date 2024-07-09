@@ -78,7 +78,7 @@ import paho.mqtt.client as mqtt
 
 ### Writing connection callback
 
-Successful or failed MQTT connections can be handled in this callback function, and this example will subscribe to the `django/mqtt` topic after a successful connection.
+Successful or failed MQTT connections can be handled in this callback function, and this example will subscribe to the `uprint/kiosk` topic after a successful connection.
 
 ```
 def on_connect(mqtt_client, userdata, flags, rc):
@@ -174,7 +174,7 @@ Finally, execute the following command to run the Django project.
 python3 manage.py runserver
 ```
 
-When the Django application starts, the MQTT client will connect to the MQTT Broker and subscribe to the topic `django/mqtt`.
+When the Django application starts, the MQTT client will connect to the MQTT Broker and subscribe to the topic `uprint/kiosk`.
 
 ## Testing
 
@@ -186,7 +186,7 @@ Next, we will use [open-source cross-platform MQTT client - MQTTX](https://mqttx
 
    ![Receive MQTT messages](https://assets.emqx.com/images/f9b4449af7ac15183ca9b66ea7210ed1.png)
 
-2. Publish the message `Hello from MQTTX` to the `django/mqtt` topic in the message publishing box at the bottom of MQTTX.
+2. Publish the message `Hello from MQTTX` to the `uprint/kiosk` topic in the message publishing box at the bottom of MQTTX.
 
    ![Publish MQTT messages](https://assets.emqx.com/images/1d138bc5e7720c3a8c938137e6472ecb.png)
 
@@ -196,11 +196,11 @@ Next, we will use [open-source cross-platform MQTT client - MQTTX](https://mqttx
 
 ### Test message publishing API
 
-1. Subscribe to the `django/mqtt` topic in MQTTX.
+1. Subscribe to the `uprint/kiosk` topic in MQTTX.
 
    ![Subscribe to MQTT topic](https://assets.emqx.com/images/fe6d48d40f8411a8921747d02ff8abc6.png)
 
-2. Use Postman to call `/publish` API: publish the message `Hello from Django` to the `django/mqtt` topic.
+2. Use Postman to call `/publish` API: publish the message `Hello from Django` to the `uprint/kiosk` topic. (HTTP Request)
 
    ![Use Postman to call API](https://assets.emqx.com/images/047e4c70a29041ab23d67379b3114bce.png)
 
