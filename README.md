@@ -19,8 +19,8 @@ Python 3.8.2
 Install Django and `paho-mqtt` using Pip.
 
 ```
-pip3 install django
-pip3 install paho-mqtt
+pip install django
+pip install paho-mqtt
 ```
 
 Create a Django project.
@@ -171,7 +171,7 @@ At this point, we have finished writing all the code, and the full code can be f
 Finally, execute the following command to run the Django project.
 
 ```
-python3 manage.py runserver
+python manage.py runserver
 ```
 
 When the Django application starts, the MQTT client will connect to the MQTT Broker and subscribe to the topic `uprint/kiosk`.
